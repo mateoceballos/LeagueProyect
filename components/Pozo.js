@@ -13,8 +13,9 @@ class Loldetails {
       Añadiento nuevo contendiente, nombre: ${Lol.nombre}.
       Papel que tendra en la batalla: ${Lol.rol}.
       Disponibilidad de niveles: ${Lol.nivel}.
+      La habilidad de tu campeón es lanzar un gran cohete
       Y tu linea de juego es Botline (Linea inferior)
-      .........................
+      ........................
       Bienvenido nuevo contendiente.
       `
     );
