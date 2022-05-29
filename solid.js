@@ -1,4 +1,4 @@
-import Lol from "./components/Campeones.js";
+import LolP from "./components/Campeones.js";
 import Loldetails from "./components/Pozo.js";
 import ProcessAttack, { ADC } from "./components/ProcessAttack.js";
 import {
@@ -76,7 +76,7 @@ process.stdin.on('data', function(prueba){
   }
 });
 process.on('exit', function(){
-  const Jinx = new Lol(`${answers[1]}`, `${answers[0]}`,`${answers[0]}`, ["Nivel1", "Nivel2"]);
+  const Jinx = new LolP(`${answers[1]}`, `${answers[0]}`,`${answers[0]}`, ["Nivel1", "Nivel2"]);
   const Pozo = new Loldetails();
   Pozo.introducirEnTablero(Jinx);
   
