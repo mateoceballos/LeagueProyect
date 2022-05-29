@@ -5,6 +5,7 @@ import {
   Nautilus,
   Ahri,
   Malphite,
+  Leona,
 } from "./components/ChampionsAction.js";
 
 /* Single Responsibility Principle.
@@ -93,7 +94,7 @@ process.on('exit', function(){
     // invocamos al método todosLoscombosLol y enviamos las
     // instancias te cada tipo de personaje
     const Mensaje = Ataque.todosLoscombosLol([new ADC("Jinx")]);
-    console.log(Mensaje);
+    //console.log(Mensaje);
     
     // Creamos la instancia de la clase Ahri, nuestra primer personaje secundaria
     const AHRI = new Ahri();
@@ -101,7 +102,7 @@ process.on('exit', function(){
       Como se comento con anterioridad Ahri puede 
       utilizar todos los métodos de la clase Campeones.    
     */
-    console.log(`Conoce a tus 3 compañeros de equipo en este nuevo modo de juego`);
+    console.log(`Conoce a tus 4 compañeros de equipo en este nuevo modo de juego`);
     console.log(`......................................................... `);
     console.log(`......................................................... `);
     console.log(`Compañero de equipo 1, Carril: Middle (carril central): `);
@@ -140,6 +141,20 @@ process.on('exit', function(){
     console.log(`Soy ${NAUTILUS.rol}`);
     console.log(`Ademas ${NAUTILUS.puedeUlt}, te apoyaré mientras recorro el mapa`);
     console.log(`......................................................... `);
+
+     // Creamos la instancia de la clase Nautilus
+     const LEONA = new Leona();
+     /*
+      * Como se comento con anterioridad Nautilus no puede
+      * utilizar todos los métodos de la clase campeones.
+      */
+     console.log(`......................................................... `);
+     console.log(`Compañero de equipo 4, Carril: Soporte: `);
+     console.log(`.. `);
+     console.log(`Hola soy ${LEONA.nombre}`);
+     console.log(`Soy ${LEONA.rol}`);
+     console.log(`Ademas ${LEONA.puedeUlt}, te ayudare a matar a tus enemigos`);
+     console.log(`......................................................... `);
     console.log(`......................................................... `);
     console.log(`......................................................... `);
     console.log(`!BIENVENIDOS A LEAGUE OF LEGENDS¡ `);
