@@ -45,3 +45,11 @@ export class Nautilus extends puedeUlt(Lol) {
     super("Nautilus", "Tanqueap","muy grande");
   }
 }
+
+export class Leona extends puedeUlt(Lol) {
+  // Creamos el metodo principal
+  constructor() {
+    // Invocamos al constructor de la clase campeones
+    super("Leona", "Tanquead","tu escudo");
+  }
+}
