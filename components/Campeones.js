@@ -39,7 +39,7 @@ class Lol {
   #rol = ""; 
   #nivel = [];
 
-  constructor(nombre, rol, carril, nivel) {
+  constructor(nombre, rol, nivel) {
     this.#nombre = nombre;
     this.#rol = rol;
     this.#nivel = nivel;
