@@ -4,17 +4,15 @@
 class Loldetails {
   constructor() {}
 
-  introducirEnTablero(Lol) {
+  introducirEnTablero(LolP) {
     console.log(
       `Almacenando nuevo campeon en el pozo de lucha
       
-      ENTRADA A LA GRIETA DEL INVOCADARK..........
-      .........................
-      Añadiento nuevo contendiente, nombre: ${Lol.nombre}.
-      Papel que tendra en la batalla: ${Lol.rol}.
-      Disponibilidad de niveles: ${Lol.nivel}.
+      Añadiento nuevo contendiente, nombre: ${LolP.nombre}.
+      Papel que tendra en la batalla: ${LolP.rol}.
+      Disponibilidad de niveles: ${LolP.nivel}.
       La habilidad de tu campeón es lanzar un gran cohete
-      Y tu linea de juego es ${Lol.carril}
+      Y tu linea de juego es ${LolP.rol}
       ........................
       Bienvenido nuevo contendiente.
       `

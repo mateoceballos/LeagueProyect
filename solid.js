@@ -17,8 +17,9 @@ import {
 var answers = [];
 var questions = [
   " Ahora, escribe el nombre de tu campeón",
+  "Por ultimo selecciona el mapa que quieres jugar, siendo 1 ARAM y 2 La grieta del invocadark"
 ];
-var validation = 0;
+var validation = 10;
 asks(0)
 function asks(i){
   if (i == 0) {
@@ -27,14 +28,14 @@ function asks(i){
     process.stdout.write("Top (1), Jungla (2), Mid (3), ADC (4) o Soporte (5)");
     process.stdout.write("\n");
   }else{
-    process.stdout.write(`${questions[0]}`);
+    process.stdout.write(`${questions[validation]}`);
     process.stdout.write("\n");
   }
 }
 process.stdin.on('data', function(prueba){
-  if (validation == 0) {
+  if (validation == 10) {
     Number(prueba)?prueba =Number(prueba) : prueba = "nada" ;
-    if (!isNaN(prueba)&& prueba >0 && prueba < 5) {
+    if (!isNaN(prueba)&& prueba >0 && prueba < 6) {
       var line = "";
       switch (prueba) {
         case 1:
@@ -62,7 +63,7 @@ process.stdin.on('data', function(prueba){
             break;
       }
       answers.push(line.toString().trim());
-        validation = 1;
+        validation = 0;
         asks(1)
     }else{
       process.stdout.write("Valor incorrecto");
@@ -72,12 +73,42 @@ process.stdin.on('data', function(prueba){
       process.stdout.write("\n");
     }
   }else{
-    answers.push(prueba.toString().trim());
-    process.exit();
+    if (validation == 0) {
+      answers.push(prueba.toString().trim());
+      validation = 1;
+      asks(1);
+    }else{
+      Number(prueba)?prueba =Number(prueba) : prueba = "nada" ;
+      if (!isNaN(prueba)&& prueba >0 && prueba < 3) {
+        var map = "";
+        switch (prueba) {
+          case 1:
+            map = "ARAM";
+            break;
+          case 2:
+            map = "GRIETA DEL INVOCADARK";
+            break;
+        
+          default:
+            break;
+        }
+        answers.push(map.toString().trim());
+        process.exit();
+      }else{
+        process.stdout.write("Valor incorrecto");
+        process.stdout.write("\n");
+        process.stdout.write("Reintentando...");
+        process.stdout.write("1 ARAM y 2 La grieta del invocadark");
+        process.stdout.write("\n");
+      }
+    }
   }
 });
 process.on('exit', function(){
-  const Jinx = new LolP(`${answers[1]}`, `${answers[0]}`,`${answers[0]}`, ["Nivel1", "Nivel2"]);
+  console.log(`ENTRADA AL MAPA: ${answers[2]}`);
+  console.log("\n");
+  console.log("...................................");
+  const Jinx = new LolP(`${answers[1]}`, `${answers[0]}`, ["Nivel1", "Nivel2"],`${answers[0]}`);
   const Pozo = new Loldetails();
   Pozo.introducirEnTablero(Jinx);
   
