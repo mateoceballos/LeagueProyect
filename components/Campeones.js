@@ -37,13 +37,11 @@ class LolP {
 class Lol {
   #nombre = "";
   #rol = ""; 
-  #carril = ""; 
   #nivel = [];
 
   constructor(nombre, rol, carril, nivel) {
     this.#nombre = nombre;
     this.#rol = rol;
-    this.#carril = carril;
     this.#nivel = nivel;
   }
 
@@ -53,9 +51,6 @@ class Lol {
 
   get rol() {
     return this.#rol;
-  }
-  get carril() {
-    return this.#carril;
   }
 
   get nivel() {
