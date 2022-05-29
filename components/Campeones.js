@@ -56,7 +56,6 @@ class Lol {
   get nivel() {
     return this.#nivel;
   }
-
   get ataque() {
     const { nombre } = this;
     return `${nombre}, Ataque base`;
