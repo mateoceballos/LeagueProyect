@@ -14,7 +14,7 @@ class Loldetails {
       Papel que tendra en la batalla: ${Lol.rol}.
       Disponibilidad de niveles: ${Lol.nivel}.
       La habilidad de tu campeón es lanzar un gran cohete
-      Y tu linea de juego es Botline (Linea inferior)
+      Y tu linea de juego es ${Lol.carril}
       ........................
       Bienvenido nuevo contendiente.
       `
